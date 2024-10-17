@@ -19,8 +19,8 @@ public class Blip {
 	 */
 	public Blip(long id, int xCoordinate, int yCoordinate, int type) {
 		this.setId(id);
-		this.setxCoordinate(xCoordinate);
-		this.setyCoordinate(yCoordinate);
+		this.setXCoordinate(xCoordinate);
+		this.setYCoordinate(yCoordinate);
 		this.setType(type);
 	}
 
@@ -32,19 +32,19 @@ public class Blip {
 		this.id = id;
 	}
 
-	public int getxCoordinate() {
+	public int getXCoordinate() {
 		return xCoordinate;
 	}
 
-	public void setxCoordinate(int xCoordinate) {
+	public void setXCoordinate(int xCoordinate) {
 		this.xCoordinate = xCoordinate;
 	}
 
-	public int getyCoordinate() {
+	public int getYCoordinate() {
 		return yCoordinate;
 	}
 
-	public void setyCoordinate(int yCoordinate) {
+	public void setYCoordinate(int yCoordinate) {
 		this.yCoordinate = yCoordinate;
 	}
 

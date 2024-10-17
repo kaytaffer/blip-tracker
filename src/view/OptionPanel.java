@@ -14,7 +14,7 @@ public class OptionPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	
 	public OptionPanel(Dimension size) {
-		this.setLayout(new GridLayout(3, 1, 5, 5)); //3 rows, one for each optional button. 5 pixel spacing.
+		this.setLayout(new GridLayout(3, 1, 0, 5)); //3 rows, one for each optional button. 5 pixel spacing.
 		this.setBackground(new Color(0xDDDDDD));
 		this.setPreferredSize(size);
 		

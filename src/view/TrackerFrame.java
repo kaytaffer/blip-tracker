@@ -44,7 +44,7 @@ public class TrackerFrame extends JFrame {
 		MapPanel mapPanel = new MapPanel(new Dimension(MAP_SIZE, MAP_SIZE));
 		OptionPanel optionPanel = new OptionPanel(new Dimension(OPTION_WIDTH, MAP_SIZE));
 		InfoPanel infoPanel = new InfoPanel(new Dimension(MAP_SIZE + OPTION_WIDTH, INFO_HEIGHT));
-		this.add(mapPanel, BorderLayout.WEST);
+		this.add(mapPanel, BorderLayout.CENTER);
 		this.add(optionPanel, BorderLayout.EAST);
 		this.add(infoPanel, BorderLayout.SOUTH);
 	}
