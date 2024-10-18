@@ -2,7 +2,6 @@ package integration;
 
 /**
  * Immutable Data Transfer Object representing a blip on a 2D map, of a particular type.
- *
  */
 public class BlipDTO {
 	private long id;
@@ -11,11 +10,11 @@ public class BlipDTO {
 	private int type;
 	
 	/**
-	 * TODO JavaDocs
+	 * Constructs an instance of a {@code BlipDTO}.
 	 * @param id The unique identifier of the object to represent as a {@Code} blip.
-	 * @param xCoordinate 
-	 * @param yCoordinate
-	 * @param type
+	 * @param xCoordinate The position in the x-dimension of the object to represent.
+	 * @param yCoordinate The position in the y-dimension of the object to represent.
+	 * @param type A number representing the type the blip should be treated as.
 	 */
 	public BlipDTO(long id, int xCoordinate, int yCoordinate, int type) {
 		this.id = id;
