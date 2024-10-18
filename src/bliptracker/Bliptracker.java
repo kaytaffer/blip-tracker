@@ -3,10 +3,7 @@
  */
 package bliptracker;
 
-import java.util.HashMap;
-
 import bliptracker.controller.Controller;
-import bliptracker.integration.BlipDTO;
 import bliptracker.integration.DataParser;
 import bliptracker.model.BlipLocationModel;
 import bliptracker.view.TrackerFrame;
