@@ -10,7 +10,7 @@ import java.util.Map;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-import model.Blip;
+import integration.BlipDTO;
 
 /**
  * View component responsible for rendering the background map as well as the moving objects on a 2D surface.
@@ -19,7 +19,7 @@ public class MapPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	private final int BLIP_DIAMETER = 10;
-	private Map<Long, Blip> blipsToRender; 
+	private Map<Long, BlipDTO> blipsToRender; 
 	private int[] visibleBlipTypes;
 	
 	/**
@@ -40,18 +40,18 @@ public class MapPanel extends JPanel {
 		Image mapImage = new ImageIcon("map.gif").getImage();
 		g.drawImage(mapImage, 0, 0, null);
 		
-		for(Blip blip : blipsToRender.values()) {
-			int blipType = blip.getType();
+		for(BlipDTO blipDTO : blipsToRender.values()) {
+			int blipType = blipDTO.getType();
 			
 			for(int visibleType : visibleBlipTypes) {
-				if(blip.getType() == visibleType) {
+				if(blipDTO.getType() == visibleType) {
 					if(blipType == 1)
 						g.setColor(Color.BLUE);
 					else if(blipType == 2)
 						g.setColor(Color.RED);
 					else if(blipType == 3)
 						g.setColor(Color.ORANGE);
-					g.fillOval(blip.getXCoordinate(), blip.getYCoordinate(), BLIP_DIAMETER, BLIP_DIAMETER);
+					g.fillOval(blipDTO.getXCoordinate(), blipDTO.getYCoordinate(), BLIP_DIAMETER, BLIP_DIAMETER);
 					break;
 				}
 			}
@@ -62,7 +62,7 @@ public class MapPanel extends JPanel {
 	 * Re-renders this {@code MapPanel} with the supplied data.
 	 * @param blipsToRender The current state of the blips to render.
 	 */
-	public void renderBlips(Map<Long, Blip> blipsToRender) {
+	public void renderBlips(Map<Long, BlipDTO> blipsToRender) {
 		this.blipsToRender = blipsToRender;
 		repaint();
 	}
