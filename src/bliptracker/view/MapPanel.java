@@ -31,6 +31,7 @@ public class MapPanel extends JPanel implements BlipLocationModelObserver {
         this.setPreferredSize(mapSize);
         this.blipsToRender = new HashMap<>();
         this.visibleBlipTypes = new int[] {1, 2, 3}; //Defaults to all types visible.
+        this.setBackground(new Color(0xDDDDDD));
     }
 
 	/**
@@ -43,6 +44,7 @@ public class MapPanel extends JPanel implements BlipLocationModelObserver {
 		
 		for(BlipDTO blipDTO : blipsToRender.values()) {
 			int blipType = blipDTO.getType();
+			int offset = BLIP_DIAMETER / 2;
 			
 			for(int visibleType : visibleBlipTypes) {
 				if(blipDTO.getType() == visibleType) {
@@ -52,7 +54,7 @@ public class MapPanel extends JPanel implements BlipLocationModelObserver {
 						g.setColor(Color.RED);
 					else if(blipType == 3)
 						g.setColor(Color.ORANGE);
-					g.fillOval(blipDTO.getXCoordinate(), blipDTO.getYCoordinate(), BLIP_DIAMETER, BLIP_DIAMETER);
+					g.fillOval(blipDTO.getXCoordinate() - offset, blipDTO.getYCoordinate() - offset, BLIP_DIAMETER, BLIP_DIAMETER);
 					break;
 				}
 			}
