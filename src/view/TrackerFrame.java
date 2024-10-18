@@ -24,6 +24,7 @@ public class TrackerFrame extends JFrame {
 	//private final int Y_FRAME_SIZE = MAP_SIZE + 100 + COMPONENT_BORDER_SIZE;
 	private final boolean APP_IS_RESIZABLE = false; 
 	private final String ICON_PATH = "map.gif";
+	private MapPanel mapPanel; 
 	
 	public TrackerFrame(Controller controller) {
 		ImageIcon icon = new ImageIcon(ICON_PATH);
@@ -36,17 +37,18 @@ public class TrackerFrame extends JFrame {
 		this.setLayout(new BorderLayout(COMPONENT_BORDER_SIZE, COMPONENT_BORDER_SIZE)); //Margins
 		
 		setUpPanels();
+		controller.connectAndSubscribe(mapPanel);
 		
 		this.pack();
+		this.setVisible(true);
 	}
 	
 	private void setUpPanels() {		
-		MapPanel mapPanel = new MapPanel(new Dimension(MAP_SIZE, MAP_SIZE));
+		this.mapPanel = new MapPanel(new Dimension(MAP_SIZE, MAP_SIZE));
 		OptionPanel optionPanel = new OptionPanel(new Dimension(OPTION_WIDTH, MAP_SIZE));
 		InfoPanel infoPanel = new InfoPanel(new Dimension(MAP_SIZE + OPTION_WIDTH, INFO_HEIGHT));
 		this.add(mapPanel, BorderLayout.CENTER);
 		this.add(optionPanel, BorderLayout.EAST);
 		this.add(infoPanel, BorderLayout.SOUTH);
 	}
-	
 }
