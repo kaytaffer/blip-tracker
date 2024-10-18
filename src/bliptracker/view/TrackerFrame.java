@@ -9,8 +9,8 @@ import javax.swing.JFrame;
 import bliptracker.controller.Controller;
 
 /**
- *TODO JavaDoc top level container
- *
+ * Top level Java Swing {@code JFrame} responsible for setting up and managing Swing 
+ * subcomponents as a GUI view for the Bliptracker application.
  */
 public class TrackerFrame extends JFrame {
 
@@ -20,12 +20,14 @@ public class TrackerFrame extends JFrame {
 	private final int MAP_SIZE = 300;
 	private final int OPTION_WIDTH = 200;
 	private final int INFO_HEIGHT = 100;
-	//private final int X_FRAME_SIZE = MAP_SIZE + 200 + COMPONENT_BORDER_SIZE;
-	//private final int Y_FRAME_SIZE = MAP_SIZE + 100 + COMPONENT_BORDER_SIZE;
 	private final boolean APP_IS_RESIZABLE = false; 
 	private final String ICON_PATH = "map.gif";
 	private MapPanel mapPanel; 
 	
+	/**
+	 * Creates an instance of a {@code TrackerFrame}. 
+	 * @param controller The application controller.
+	 */
 	public TrackerFrame(Controller controller) {
 		ImageIcon icon = new ImageIcon(ICON_PATH);
 		this.setIconImage(icon.getImage());
@@ -33,14 +35,12 @@ public class TrackerFrame extends JFrame {
 		this.setTitle(APPLICATION_NAME);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(APP_IS_RESIZABLE);
-		//this.setSize(this.X_FRAME_SIZE, this.Y_FRAME_SIZE);
 		this.setLayout(new BorderLayout(COMPONENT_BORDER_SIZE, COMPONENT_BORDER_SIZE)); //Margins
 		
-		setUpPanels();
-		controller.connectAndSubscribe(mapPanel);
-		
+		setUpPanels();		
 		this.pack();
 		this.setVisible(true);
+		controller.connectAndSubscribe(mapPanel);
 	}
 	
 	private void setUpPanels() {		
