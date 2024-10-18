@@ -1,4 +1,4 @@
-package view;
+package bliptracker.view;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -10,8 +10,8 @@ import java.util.Map;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-import integration.BlipDTO;
-import model.BlipLocationModelObserver;
+import bliptracker.integration.BlipDTO;
+import bliptracker.model.BlipLocationModelObserver;
 
 /**
  * View component responsible for rendering the background map as well as the moving objects on a 2D surface.

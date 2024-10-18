@@ -1,4 +1,4 @@
-package integration;
+package bliptracker.integration;
 
 /**
  * Immutable Data Transfer Object representing a blip on a 2D map, of a particular type.

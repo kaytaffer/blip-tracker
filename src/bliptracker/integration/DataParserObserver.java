@@ -1,4 +1,4 @@
-package integration;
+package bliptracker.integration;
 
 /**
  * Observer interface that informs classes that implements it that the {@code DataParser} has

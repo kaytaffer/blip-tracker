@@ -1,8 +1,8 @@
-package model;
+package bliptracker.model;
 
 import java.util.Map;
 
-import integration.BlipDTO;
+import bliptracker.integration.BlipDTO;
 
 /**
  * Observer interface that informs classes that implements it that the {@code BlipLocationModel} has

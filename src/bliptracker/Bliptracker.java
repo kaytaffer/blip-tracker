@@ -5,11 +5,11 @@ package bliptracker;
 
 import java.util.HashMap;
 
-import controller.Controller;
-import integration.BlipDTO;
-import integration.DataParser;
-import model.BlipLocationModel;
-import view.TrackerFrame;
+import bliptracker.controller.Controller;
+import bliptracker.integration.BlipDTO;
+import bliptracker.integration.DataParser;
+import bliptracker.model.BlipLocationModel;
+import bliptracker.view.TrackerFrame;
 
 /**
  * This class bootstraps the Bliptracker application.

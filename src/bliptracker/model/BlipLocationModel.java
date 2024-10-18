@@ -1,10 +1,10 @@
-package model;
+package bliptracker.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import integration.BlipDTO;
-import integration.DataParserObserver;
+import bliptracker.integration.BlipDTO;
+import bliptracker.integration.DataParserObserver;
 
 public class BlipLocationModel implements DataParserObserver {
 	

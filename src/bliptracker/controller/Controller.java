@@ -1,8 +1,8 @@
-package controller;
+package bliptracker.controller;
 
-import integration.DataParser;
-import model.BlipLocationModel;
-import model.BlipLocationModelObserver;
+import bliptracker.integration.DataParser;
+import bliptracker.model.BlipLocationModel;
+import bliptracker.model.BlipLocationModelObserver;
 
 /**
  * Singleton controller responsible for managing the interactions between the layers of the application. 

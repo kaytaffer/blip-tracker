@@ -1,4 +1,4 @@
-package view;
+package bliptracker.view;
 
 import java.awt.Color;
 import java.awt.Dimension;

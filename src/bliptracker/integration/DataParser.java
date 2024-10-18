@@ -1,4 +1,4 @@
-package integration;
+package bliptracker.integration;
 
 import java.io.BufferedReader;
 import java.io.IOException;

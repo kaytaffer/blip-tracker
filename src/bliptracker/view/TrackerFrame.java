@@ -1,4 +1,4 @@
-package view;
+package bliptracker.view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -6,7 +6,7 @@ import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-import controller.Controller;
+import bliptracker.controller.Controller;
 
 /**
  *TODO JavaDoc top level container
