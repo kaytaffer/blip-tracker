@@ -18,6 +18,3 @@ buildNumber.properties
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 /bin/
-
-# Assignment-specific files
-map.gif
