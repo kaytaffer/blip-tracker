@@ -12,8 +12,10 @@ import javax.swing.JRadioButton;
 public class OptionPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
+	private final MapPanel MAP_PANEL;
 	
-	public OptionPanel(Dimension size) {
+	public OptionPanel(Dimension size, MapPanel mapPanel) {
+		this.MAP_PANEL = mapPanel;
 		this.setLayout(new GridLayout(3, 1, 0, 5)); //3 rows, one for each optional button. 5 pixel spacing.
 		this.setBackground(new Color(0xDDDDDD));
 		this.setPreferredSize(size);
