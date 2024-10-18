@@ -11,11 +11,12 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 import integration.BlipDTO;
+import model.BlipLocationModelObserver;
 
 /**
  * View component responsible for rendering the background map as well as the moving objects on a 2D surface.
  */
-public class MapPanel extends JPanel {
+public class MapPanel extends JPanel implements BlipLocationModelObserver {
 
 	private static final long serialVersionUID = 1L;
 	private final int BLIP_DIAMETER = 10;
@@ -57,15 +58,6 @@ public class MapPanel extends JPanel {
 			}
 		}
 	}
-
-	/**
-	 * Re-renders this {@code MapPanel} with the supplied data.
-	 * @param blipsToRender The current state of the blips to render.
-	 */
-	public void renderBlips(Map<Long, BlipDTO> blipsToRender) {
-		this.blipsToRender = blipsToRender;
-		repaint();
-	}
 	
 	/**
 	 * Sets which types of blips should be visible and rendered by this {@code MapPanel}.
@@ -73,5 +65,15 @@ public class MapPanel extends JPanel {
 	 */
 	public void setVisibleBlipTypes(int[] visibleBlipTypes) {
 		this.visibleBlipTypes = visibleBlipTypes;
+	}
+
+	@Override
+	/**
+	 * Re-renders this {@code MapPanel} with the supplied data.
+	 * @param blipsToRender The current state of the blips to render.
+	 */
+	public void notifyObserversBlipsHaveChanged(Map<Long, BlipDTO> blips) {
+		this.blipsToRender = blips;
+		repaint();
 	}
 }
