@@ -25,7 +25,6 @@ public class DataParser implements Runnable {
 
 	@Override
 	public void run() {
-
 		try {
 			this.socket = new Socket("localhost", 5463);
 			BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -63,7 +62,7 @@ public class DataParser implements Runnable {
 	
 	private void notifyObservers(BlipDTO blip){
         for(DataParserObserver observer : this.observers){
-            observer.notifyObserversNewDataReceived(null);
+            observer.notifyObserversNewDataReceived(blip);
         }
     }
 }
