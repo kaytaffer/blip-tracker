@@ -25,9 +25,9 @@ src/
 ```
 
 ## How to install and run
-- Make sure to have java installed on your computer.
+- Make sure to have Java installed on your computer.
 - Fork or download the contents of the Github repository at https://github.com/kaytaffer/bliptracker
-- Make sure your data server this application should read from is running on localhost:5463. 
+- Make sure your data server from which Bliptracker should read is running on localhost:5463. 
 - From your terminal/command line, navigate to the directory of the contents, e.g. D:/MyDownloads/bliptracker/.
 - (Optional) In this same directory, place a 300 by 300 pixel file called `map.gif` to act as background.
 - Enter the command `javac -d bin -sourcepath src -cp bin src/bliptracker/*.java src/bliptracker/controller/*.java src/bliptracker/integration/*.java src/bliptracker/model/*.java src/bliptracker/view/*.java && java -cp bin bliptracker.Bliptracker` or run `bliptracker.sh` to compile and run the application.
