@@ -22,6 +22,7 @@ public class MapPanel extends JPanel implements BlipLocationModelObserver {
 	private final int BLIP_DIAMETER = 10;
 	private Map<Long, BlipDTO> blipsToRender; 
 	private int[] visibleBlipTypes;
+	private final Image MAP_IMAGE = new ImageIcon("map.gif").getImage();
 	
 	/**
 	 * Creates an instance of a {@code MapPanel}. 
@@ -39,8 +40,7 @@ public class MapPanel extends JPanel implements BlipLocationModelObserver {
 	 * directly once this {@code MapPanel} has been instantiated.
 	 */
 	public void paint(Graphics g) {
-		Image mapImage = new ImageIcon("map.gif").getImage();
-		g.drawImage(mapImage, 0, 0, null);
+		g.drawImage(MAP_IMAGE, 0, 0, null);
 		
 		for(BlipDTO blipDTO : blipsToRender.values()) {
 			int blipType = blipDTO.getType();
